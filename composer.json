@@ -1,0 +1,15 @@
+{
+    "name": "Grafana Del Amor",
+    "description": "Tentative d&#39;intégration de grafana",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Nicolas Debruyker"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}
