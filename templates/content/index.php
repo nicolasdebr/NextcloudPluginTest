@@ -1,7 +1,20 @@
 <?php
-import  basename from '@nextcloud/paths';
+namespace OCA\MyApp\Storage;
 
-$fichier = basename('/files/questions.txt');
+class AuthorStorage {
+
+    private $storage;
+
+    public function __construct($storage){
+        $this->storage = $storage;
+    }
+
+    public function getContent($id) {
+        // check if file exists and read from it if possible
+        try {
+            $file = $this->storage->getById($id);
+            if($file instanceof \OCP\Files\File) {
+                $fichier = "test.txt";
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
@@ -21,3 +34,11 @@ for($i = 0; $i < $nb; $i++)
 }
 ?>
 <p>Le document contiens <?= $total ?> caractères</p>
+            } else {
+                throw new StorageException('Can not read from folder');
+            }
+        } catch(\OCP\Files\NotFoundException $e) {
+            throw new StorageException('File does not exist');
+        }
+    }
+}
