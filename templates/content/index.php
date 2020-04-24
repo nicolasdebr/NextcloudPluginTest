@@ -1,5 +1,4 @@
 <?php
-<?php
 namespace OCA\MyApp\Storage;
 
 class AuthorStorage {
