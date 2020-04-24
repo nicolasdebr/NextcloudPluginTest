@@ -1,5 +1,7 @@
 <?php
-$fichier = "http://192.168.159.132/index.php/apps/files/?dir=/Documents&fileid=10";
+import { basename, dirname, encodePath, isSamePath, joinPaths } from '@nextcloud/paths'
+
+$fichier = basename('/my/questions.txt');
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
