@@ -1,5 +1,5 @@
 <?php
-import { basename, dirname, encodePath, isSamePath, joinPaths } from '@nextcloud/paths'
+import { "questions.text", "files", encodePath, isSamePath, joinPaths } from '@nextcloud/paths';
 
 $fichier = basename('/my/questions.txt');
 $total = 0;
