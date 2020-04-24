@@ -1,6 +1,6 @@
 <?php
-echo $_FILES['questions.txt'];
-$fichier = "";
+
+$fichier = $file;
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
