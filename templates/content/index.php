@@ -19,4 +19,5 @@ for($i = 0; $i < $nb; $i++)
 <?php
 }
 ?>
+
 <p>Le document contiens <?= $total ?> caractères</p>
