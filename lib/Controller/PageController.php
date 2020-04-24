@@ -27,5 +27,10 @@ class PageController extends Controller {
 	public function index() {
 		return new TemplateResponse('grafanadelamor', 'index');  // templates/index.php
 	}
+	class PageController extends Controller {
+
+	    public function someMethod() {
+		$file = $this->request->getUploadedFile('questions.txt');  // $_FILES['myfile']
+	    }
 
 }
