@@ -1,5 +1,5 @@
 <?php
-
+echo $file;
 $fichier = $file;
 $total = 0;
 $ressource = fopen ($fichier, "r");
