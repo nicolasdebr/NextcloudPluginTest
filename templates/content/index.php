@@ -1,6 +1,6 @@
 <?php
 
-$fichier = "http://192.168.159.132/index.php/f/271";
+$fichier = "$_FILES['questions.txt']";
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
