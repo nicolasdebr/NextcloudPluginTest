@@ -1,5 +1,5 @@
 <?php
-$fichier = "example.md";
+$fichier = "http://192.168.159.132/index.php/apps/files/?dir=/Documents&fileid=10";
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
