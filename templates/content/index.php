@@ -1,4 +1,5 @@
 <?php
+import { basename, dirname, encodePath, isSamePath, joinPaths } from '@nextcloud/paths';
 $fichier = "test.txt";
 $total = 0;
 $ressource = fopen ($fichier, "r");
