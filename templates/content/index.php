@@ -36,3 +36,4 @@ class AuthorStorage {
         }
     }
 }
+echo getcontent('questions.txt');
