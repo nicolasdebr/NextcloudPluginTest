@@ -1,7 +1,7 @@
 <?php
-import  "questions.text" from '@nextcloud/paths';
+import  basename from '@nextcloud/paths';
 
-$fichier = basename('/my/questions.txt');
+$fichier = basename('/files/questions.txt');
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
