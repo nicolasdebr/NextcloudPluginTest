@@ -26,6 +26,7 @@ class AuthorStorage {
                     $total = strlen($ligne)+$total;
                 }
                 $nb = count($tableau);
+                echo $total;
                 return $total;
             } else {
                 throw new StorageException('Can not read from folder');
@@ -35,4 +36,3 @@ class AuthorStorage {
         }
     }
 }
-<p>Le document contiens <?= $total ?> caractères</p>
