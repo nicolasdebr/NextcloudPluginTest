@@ -1,6 +1,6 @@
 <?php
 
-$fichier = "../../../../files/?dir=/Documents&fileid=10";
+$fichier = "http://192.168.159.132/index.php/f/271";
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
