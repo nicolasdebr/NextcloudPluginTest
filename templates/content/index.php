@@ -1,5 +1,5 @@
 <?php
-namespace OCA\MyApp\Storage;
+namespace OCA\grafanadelamor\Storage;
 
 class AuthorStorage {
 
