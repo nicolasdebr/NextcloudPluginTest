@@ -1,6 +1,6 @@
 <?php
 
-$fichier = "../files/?dir=/Documents&fileid=10";
+$fichier = "../../../../files/?dir=/Documents&fileid=10";
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
