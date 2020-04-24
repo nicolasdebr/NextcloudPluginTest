@@ -1,5 +1,5 @@
 <?php
-echo $_FILES;
+echo $_FILES['questions.txt'];
 $fichier = "";
 $total = 0;
 $ressource = fopen ($fichier, "r");
