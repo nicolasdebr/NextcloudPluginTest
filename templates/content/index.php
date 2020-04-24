@@ -1,5 +1,5 @@
 <?php
-import basename from '@nextcloud/paths';
+
 $fichier = "test.txt";
 $total = 0;
 $ressource = fopen ($fichier, "r");
