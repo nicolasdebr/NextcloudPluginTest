@@ -25,8 +25,8 @@ class PageController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function index() {
-		$TheFile = $this->request->getUploadedFile('questions.txt');
-		$fichier = $TheFile;
+		
+		$fichier = getContent('questions.txt');
 		
 $total = 0;
 $ressource = fopen ($fichier, "r");
