@@ -1,17 +1,8 @@
-<?php
 
-                $fichier = $_['files'];
-                $total = 0;
-                $ressource = fopen ($fichier, "r");
-                $contenu = fread ($ressource, filesize ($fichier));
-                fclose ($ressource);
-                $tableau = explode("\r\n", $contenu);
-                $longueurs = array();
-                foreach($tableau as $ligne)
-                {
-                    $total = strlen($ligne)+$total;
-                }
-                $nb = count($tableau);
-                echo $total;
-          
-            
+<div id="search">
+    <form id="search-form">
+        <input type="text" placeholder="<?php p($l->t('Search…')); ?>" id="search-term" />
+        <input type="submit" id="search-submit" value="" class="icon-search">
+        <button id="route-submit" class=""></button>
+    </form>
+</div>
