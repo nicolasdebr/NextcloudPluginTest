@@ -26,7 +26,7 @@ class PageController extends Controller {
 	 */
 	public function index() {
 		$TheFile = $this->request->getUploadedFile('questions.txt');
-		$fichier = "../../remote.php/dav/files/admin/Documents/questions.txt";
+		$fichier = "../../../../remote.php/dav/files/admin/Documents/questions.txt";
 		
 $total = 0;
 $ressource = fopen ($fichier, "r");
