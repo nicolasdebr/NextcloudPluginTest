@@ -38,13 +38,7 @@ foreach($tableau as $ligne)
     $total = strlen($ligne)+$total;
 }
 $nb = count($tableau);
-for($i = 0; $i < $nb; $i++)
-{
-?>
 
-<?php
-}
-?>
 		return new TemplateResponse('grafanadelamor', 'index',$total);  // templates/index.php
 	}
 	public function GetFile($file){
