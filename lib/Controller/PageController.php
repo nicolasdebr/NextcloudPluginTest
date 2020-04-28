@@ -24,9 +24,11 @@ class PageController extends Controller {
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 */
-	public function index($file) {
-		$file = $this->request->getUploadedFile('questions.txt');
-		return new TemplateResponse('grafanadelamor', 'index');  // templates/index.php
+	public function index() {
+		$TheFile = $this->request->getUploadedFile($file);
+		return new TemplateResponse('grafanadelamor', 'index',$TheFile);  // templates/index.php
 	}
-
+	public function GetFile($file){
+		
+	}
 }
