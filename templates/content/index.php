@@ -1,6 +1,6 @@
 <?php
 
-                $fichier = $file;
+                $fichier = $_['files'];
                 $total = 0;
                 $ressource = fopen ($fichier, "r");
                 $contenu = fread ($ressource, filesize ($fichier));
