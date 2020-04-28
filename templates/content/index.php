@@ -1,5 +1,5 @@
 
-<p>Le document contiens <?= $total ?> caractères</p>
+<p>Le document contiens <?= $_['total'] ?> caractères</p>
     
 <div id="search">
     <form id="search-form">
