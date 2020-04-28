@@ -1,6 +1,6 @@
 <?php
 namespace OCA\GrafanaDelAmor\Controller;
-use OCA\GrafanaDelAmor\Storage;
+include 'Storage.php';
 use OCP\IRequest;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Http\DataResponse;
