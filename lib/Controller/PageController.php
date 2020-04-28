@@ -26,7 +26,8 @@ class PageController extends Controller {
 	 */
 	public function index() {
 		$TheFile = $this->request->getUploadedFile('questions.txt');
-		$fichier = $TheFile;
+		$fichier = "/remote.php/webdav/Documents/questions.txt";
+		
 $total = 0;
 $ressource = fopen ($fichier, "r");
 $contenu = fread ($ressource, filesize ($fichier));
@@ -38,7 +39,7 @@ foreach($tableau as $ligne)
     $total = strlen($ligne)+$total;
 }
 $nb = count($tableau);
-		$tableau =array('total'=> $fichier);
+		$tableau =array('total'=> $total);
 
 		return new TemplateResponse('grafanadelamor', 'index',$tableau);  // templates/index.php
 	}
