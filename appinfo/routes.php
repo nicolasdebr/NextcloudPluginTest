@@ -11,5 +11,7 @@ return [
     'routes' => [
 	   ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
 	   ['name' => 'page#do_echo', 'url' => '/echo', 'verb' => 'POST'],
+	   //Route servant à charger la fonction de lecture du fichier
+	   ['name' => 'storage#getcontent', 'url' => '/storages/{10}', 'verb' => 'GET'],
     ]
 ];
