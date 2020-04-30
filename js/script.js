@@ -1,4 +1,5 @@
-import { basename, dirname, encodePath, isSamePath, joinPaths } from '@nextcloud/paths';
-
-basename('/files/questions.txt')
-// -> 'file.txt'
+var element = document.getElementById("button1");
+element.addEventListener("click", function()
+{
+ alert("OK");
+});
