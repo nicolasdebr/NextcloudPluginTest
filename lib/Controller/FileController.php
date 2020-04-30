@@ -4,7 +4,7 @@
  use OCP\IRequest;
  use OCP\AppFramework\Controller;
 
- class NoteController extends Controller {
+ class FileController extends Controller {
 
      public function __construct(string $AppName, IRequest $request){
          parent::__construct($AppName, $request);
