@@ -1,6 +1,4 @@
-
-<p>Le document contiens <?= $_['total'] ?> caractères</p>
-    
+   
 <div id="search">
     <form id="search-form">
         <input type="text" placeholder="" id="search-term" />
