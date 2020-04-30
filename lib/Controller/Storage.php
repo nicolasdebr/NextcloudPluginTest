@@ -1,25 +1,59 @@
 <?php
-namespace OCA\MyApp\Storage;
+ namespace OCA\grafanadelamor\Controller;
 
-class AuthorStorage {
+ use OCP\IRequest;
+ use OCP\AppFramework\Controller;
 
-    private $storage;
+ class NoteController extends Controller {
 
-    public function __construct($storage){
-        $this->storage = $storage;
-    }
+     public function __construct(string $AppName, IRequest $request){
+         parent::__construct($AppName, $request);
+     }
 
-    public function getContent($id) {
-        // check if file exists and read from it if possible
-        try {
-            $file = $this->storage->getById($id);
-            if($file instanceof \OCP\Files\File) {
-                return $file->getContent();
-            } else {
-                throw new StorageException('Can not read from folder');
-            }
-        } catch(\OCP\Files\NotFoundException $e) {
-            throw new StorageException('File does not exist');
-        }
-    }
-}
+     /**
+      * @NoAdminRequired
+      */
+     public function index() {
+         // empty for now
+     }
+
+     /**
+      * @NoAdminRequired
+      *
+      * @param int $id
+      */
+     public function show(int $id) {
+         // empty for now
+     }
+
+     /**
+      * @NoAdminRequired
+      *
+      * @param string $title
+      * @param string $content
+      */
+     public function create(string $title, string $content) {
+         // empty for now
+     }
+
+     /**
+      * @NoAdminRequired
+      *
+      * @param int $id
+      * @param string $title
+      * @param string $content
+      */
+     public function update(int $id, string $title, string $content) {
+         // empty for now
+     }
+
+     /**
+      * @NoAdminRequired
+      *
+      * @param int $id
+      */
+     public function destroy(int $id) {
+         // empty for now
+     }
+
+ }
