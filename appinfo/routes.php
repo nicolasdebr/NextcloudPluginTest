@@ -9,9 +9,11 @@
  */
 return [
     'routes' => [
-	   ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
-	   ['name' => 'page#do_echo', 'url' => '/echo', 'verb' => 'POST'],
-	   //Route servant à charger la fonction de lecture du fichier
-	   ['name' => 'storage#getcontent', 'url' => '/storages/{10}', 'verb' => 'GET'],
+	['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
+        ['name' => 'file#index', 'url' => '/files', 'verb' => 'GET'],
+        ['name' => 'file#show', 'url' => '/files/{id}', 'verb' => 'GET'],
+        ['name' => 'file#create', 'url' => '/files', 'verb' => 'POST'],
+        ['name' => 'file#update', 'url' => '/files/{id}', 'verb' => 'PUT'],
+        ['name' => 'file#destroy', 'url' => '/files/{id}', 'verb' => 'DELETE']
     ]
 ];
