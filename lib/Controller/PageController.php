@@ -26,7 +26,7 @@ class PageController extends Controller {
 	 */
 	public function index() {
 		
-		$fichier = getContent('questions.txt');
+		$fichier = "";
 		
 $total = 0;
 $ressource = fopen ($fichier, "r");
@@ -39,7 +39,7 @@ foreach($tableau as $ligne)
     $total = strlen($ligne)+$total;
 }
 $nb = count($tableau);
-		$tableau =array('total'=> $total);
+		$tableau =array('total'=> 5);
 
 		return new TemplateResponse('grafanadelamor', 'index',$tableau);  // templates/index.php
 	}
