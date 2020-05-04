@@ -1,4 +1,4 @@
-var baseUrl = OC.generateUrl('/grafanadelamor/notestutorial');
+var baseUrl = OC.generateUrl('/apps/grafanadelamor');
 var file = {
     title: 'New File',
     content: 'This is the note text'
