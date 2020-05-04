@@ -46,7 +46,7 @@
          $file->setTitle($title);
          $file->setContent($content);
          $file->setUserId($this->userId);
-         return new DataResponse($this->mapper->insert($file));
+         return new DataResponse("ID 1");
      }
 
      /**
