@@ -42,10 +42,10 @@
       * @param string $content
       */
      public function create(string $title, string $content) {
-         $note = new Note();
-         $note->setTitle($title);
-         $note->setContent($content);
-         $note->setUserId($this->userId);
+         $file = new Note();
+         $file->setTitle($title);
+         $file->setContent($content);
+         $file->setUserId($this->userId);
          return new DataResponse($this->mapper->insert($file));
      }
 
@@ -58,12 +58,12 @@
       */
      public function update(int $id, string $title, string $content) {
          try {
-             $note = $this->mapper->find($id, $this->userId);
+             $file = $this->mapper->find($id, $this->userId);
          } catch(Exception $e) {
              return new DataResponse([], Http::STATUS_NOT_FOUND);
          }
-         $note->setTitle($title);
-         $note->setContent($content);
+         $file->setTitle($title);
+         $file->setContent($content);
          return new DataResponse($this->mapper->update($file));
      }
 
@@ -74,7 +74,7 @@
       */
      public function destroy(int $id) {
          try {
-             $note = $this->mapper->find($id, $this->userId);
+             $file = $this->mapper->find($id, $this->userId);
          } catch(Exception $e) {
              return new DataResponse([], Http::STATUS_NOT_FOUND);
          }
