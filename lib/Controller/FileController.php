@@ -9,7 +9,7 @@
 
  class FileController extends Controller {
 
-    private $mapper;
+   // private $mapper;
     private $userId;
     private $service;
 
@@ -22,10 +22,10 @@
      /**
       * @NoAdminRequired
       */
-     public function index() {
+    /* public function index() {
        return new DataResponse($this->mapper->findAll($this->userId));     
      }
-
+*/
      /**
       * @NoAdminRequired
       *
