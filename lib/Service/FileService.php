@@ -18,7 +18,7 @@ class FileService {
   $file->setContent($content);
   $file->setUserId($userId);  
   
-    return $this->mapper->insert($note);
+    return $this->mapper->insert($file);
   
   }
 }
