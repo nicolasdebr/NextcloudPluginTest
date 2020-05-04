@@ -3,17 +3,20 @@
 
  use OCP\IRequest;
  use OCP\AppFramework\Controller;
-use OCP\AppFramework\Http;
+ use OCP\AppFramework\Http;
  use OCP\AppFramework\Http\DataResponse;
+ use OCA\grafanadelamor\Service\FileService;
 
  class FileController extends Controller {
 
     private $mapper;
-     private $userId;
+    private $userId;
+    private $service;
 
-     public function __construct(string $AppName, IRequest $request , $userId){
+     public function __construct(string $AppName, IRequest $request , $userId, NoteService $service){
          parent::__construct($AppName, $request);
          $this->userId = $userId;
+         $this->service = $service;
      }
 
      /**
@@ -47,7 +50,8 @@ use OCP\AppFramework\Http;
          $file->setTitle($title);
          $file->setContent($content);
          $file->setUserId($this->userId);*/
-         return new DataResponse("file:" . $tittle . " " . $content ." " . $this->userId);
+      $serviceResponse - $this->service->create(string $title, string $content,$this->userId);
+      return new DataResponse($serviceResponse);
      }
 
      /**
