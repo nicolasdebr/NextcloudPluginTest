@@ -6,7 +6,8 @@ use OCA\GrafanaDelAmor\Db\File;
 use OCA\GrafanaDelAmor\Db\FileMapper;
 
 class FileService {
-  public $mapper;
+  private $mapper;
+  
   public function _construct(FileMapper $mapper){
   $this->mapper = $mapper;
   }
