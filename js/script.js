@@ -1,16 +1,16 @@
-var baseUrl = OC.generateUrl('/apps/notestutorial');
-var note = {
-    title: 'New note',
+var baseUrl = OC.generateUrl('/grafanadelamor/notestutorial');
+var file = {
+    title: 'New File',
     content: 'This is the note text'
 };
 var id = 1;
 $.ajax({
-    url: baseUrl + '/notes/' + id,
+    url: baseUrl + '/files/' + id,
     type: 'PUT',
     contentType: 'application/json',
-    data: JSON.stringify(note)
+    data: JSON.stringify(file)
 }).done(function (response) {
-    alert(note);
+    alert(file);
 }).fail(function (response, code) {
-    // handle failure
+    alert(codde + response);
 });
