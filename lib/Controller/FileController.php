@@ -19,26 +19,8 @@
          $this->service = $service;
      }
 
-     /**
-      * @NoAdminRequired
-      */
-    /* public function index() {
-       return new DataResponse($this->mapper->findAll($this->userId));     
-     }
-*/
-     /**
-      * @NoAdminRequired
-      *
-      * @param int $id
-      */
-    /* public function show(int $id) {
-        try {
-             return new DataResponse($this->mapper->find($id, $this->userId));
-         } catch(Exception $e) {
-             return new DataResponse([], Http::STATUS_NOT_FOUND);
-         }
-     }*/
-
+    
+    
      /**
       * @NoAdminRequired
       *
@@ -54,37 +36,5 @@
       return new DataResponse($serviceResponse);
      }
 
-     /**
-      * @NoAdminRequired
-      *
-      * @param int $id
-      * @param string $title
-      * @param string $content
-      */
-    /* public function update(int $id, string $title, string $content) {
-         try {
-             $file = $this->mapper->find($id, $this->userId);
-         } catch(Exception $e) {
-             return new DataResponse([], Http::STATUS_NOT_FOUND);
-         }
-         $file->setTitle($title);
-         $file->setContent($content);
-         return new DataResponse($this->mapper->update($file));
-     }
-
-     /**
-      * @NoAdminRequired
-      *
-      * @param int $id
-      */
-   /*  public function destroy(int $id) {
-         try {
-             $file = $this->mapper->find($id, $this->userId);
-         } catch(Exception $e) {
-             return new DataResponse([], Http::STATUS_NOT_FOUND);
-         }
-         $this->mapper->delete($file);
-         return new DataResponse($file);
-     }
-*/
+     
  }
