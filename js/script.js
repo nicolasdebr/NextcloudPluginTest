@@ -5,7 +5,7 @@ var file = {
 };
 
 $.ajax({
-    url: baseUrl + '/files/' + id,
+    url: baseUrl + '/files',
     type: 'POST',
     contentType: 'application/json',
     data: JSON.stringify(file)
