@@ -7,6 +7,7 @@ use OCP\AppFramework\Db\Entity;
 
 class File extends Entity implements JsonSerializable {
 
+    // protected $id;
     protected $title;
     protected $content;
     protected $userId;
