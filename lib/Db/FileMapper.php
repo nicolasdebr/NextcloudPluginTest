@@ -1,16 +1,16 @@
 <?php
-/*namespace OCA\grafanadelamor\Db;
+namespace OCA\grafanadelamor\Db;
 
 use OCP\IDbConnection;
 use OCP\AppFramework\Db\QBMapper;
 
-class NoteMapper extends QBMapper {
+class FileMapper extends QBMapper {
 
     public function __construct(IDbConnection $db) {
-        parent::__construct($db, 'grafanadelamor_files', File::class);
+        parent::__construct($db, 'grafanadelamor', File::class);
     }
 
-    public function find(int $id, string $userId) {
+  /*  public function find(int $id, string $userId) {
         $qb = $this->db->getQueryBuilder();
 
                     $qb->select('*')
@@ -35,5 +35,5 @@ class NoteMapper extends QBMapper {
 
         return $this->findEntities($qb);
     }
-
+*/
 }
