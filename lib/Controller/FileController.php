@@ -13,7 +13,7 @@
     private $userId;
     private $service;
 
-     public function __construct(string $AppName, IRequest $request , $userId, NoteService $service){
+     public function __construct(string $AppName, IRequest $request , $userId, FileService $service){
          parent::__construct($AppName, $request);
          $this->userId = $userId;
          $this->service = $service;
