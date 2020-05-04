@@ -47,7 +47,7 @@ use OCP\AppFramework\Http;
          $file->setTitle($title);
          $file->setContent($content);
          $file->setUserId($this->userId);*/
-         return new DataResponse("ID 1");
+         return new DataResponse("ID 1:" . $tittle . " " . $content);
      }
 
      /**
