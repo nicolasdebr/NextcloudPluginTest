@@ -1,7 +1,7 @@
 var baseUrl = OC.generateUrl('/apps/grafanadelamor');
 var file = {
     title: 'New File',
-    content: 'This is the note text'
+    content: 'Description of the file'
 };
 
 $.ajax({
