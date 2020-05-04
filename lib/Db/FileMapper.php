@@ -7,7 +7,7 @@ use OCP\AppFramework\Db\QBMapper;
 class NoteMapper extends QBMapper {
 
     public function __construct(IDbConnection $db) {
-        parent::__construct($db, 'notestutorial_notes', Note::class);
+        parent::__construct($db, 'grafanadelamor_files', File::class);
     }
 
     public function find(int $id, string $userId) {
