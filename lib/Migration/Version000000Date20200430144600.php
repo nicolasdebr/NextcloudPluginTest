@@ -1,13 +1,13 @@
 <?php
 
- /* namespace OCA\grafanadelamor\Migration;
+  namespace OCA\grafanadelamor\Migration;
 
   use Closure;
   use OCP\DB\ISchemaWrapper;
   use OCP\Migration\SimpleMigrationStep;
   use OCP\Migration\IOutput;
 
-  class Version1400Date20181013124731 extends SimpleMigrationStep {
+  class Version000000Date20200430144600 extends SimpleMigrationStep {
 
     /**
     * @param IOutput $output
@@ -15,9 +15,9 @@
     * @param array $options
     * @return null|ISchemaWrapper
     */
-  /*  public function changeSchema(IOutput $output, Closure $schemaClosure, array $options) {
+    public function changeSchema(IOutput $output, Closure $schemaClosure, array $options) {
         /** @var ISchemaWrapper $schema */
-   /*     $schema = $schemaClosure();
+        $schema = $schemaClosure();
 
         if (!$schema->hasTable('grafanadelamor')) {
             $table = $schema->createTable('grafanadelamor');
