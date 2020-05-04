@@ -50,7 +50,7 @@
          $file->setTitle($title);
          $file->setContent($content);
          $file->setUserId($this->userId);*/
-      $serviceResponse - $this->service->create($title,$content,$this->userId);
+      $serviceResponse = $this->service->create($title,$content,$this->userId);
       return new DataResponse($serviceResponse);
      }
 
