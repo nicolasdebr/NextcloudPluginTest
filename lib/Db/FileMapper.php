@@ -1,5 +1,5 @@
 <?php
-namespace OCA\grafanadelamor\Db;
+/*namespace OCA\grafanadelamor\Db;
 
 use OCP\IDbConnection;
 use OCP\AppFramework\Db\QBMapper;
