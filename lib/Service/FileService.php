@@ -1,7 +1,7 @@
 <?php
 namespace OCA\grafanadelamor\Service;
 
-use OCA\grafanadelamor\Db\File;
+use OCA\GrafanaDelAmor\Db\File;
 
 class FileService {
   
