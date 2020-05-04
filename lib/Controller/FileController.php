@@ -9,7 +9,7 @@
     private $mapper;
      private $userId;
 
-     public function __construct(string $AppName, IRequest $request, NoteMapper $mapper, $UserId){
+     public function __construct(string $AppName, IRequest $request, FileMapper $mapper, $UserId){
          parent::__construct($AppName, $request);
          $this->mapper = $mapper;
          $this->userId = $UserId;
