@@ -9,10 +9,9 @@
     private $mapper;
      private $userId;
 
-     public function __construct(string $AppName, IRequest $request, FileMapper $mapper, $UserId){
+     public function __construct(string $AppName, IRequest $request){
          parent::__construct($AppName, $request);
-         $this->mapper = $mapper;
-         $this->userId = $UserId;
+         
      }
 
      /**
@@ -27,13 +26,13 @@
       *
       * @param int $id
       */
-     public function show(int $id) {
+    /* public function show(int $id) {
         try {
              return new DataResponse($this->mapper->find($id, $this->userId));
          } catch(Exception $e) {
              return new DataResponse([], Http::STATUS_NOT_FOUND);
          }
-     }
+     }*/
 
      /**
       * @NoAdminRequired
@@ -42,10 +41,10 @@
       * @param string $content
       */
      public function create(string $title, string $content) {
-         $file = new Note();
+       /*  $file = new Note();
          $file->setTitle($title);
          $file->setContent($content);
-         $file->setUserId($this->userId);
+         $file->setUserId($this->userId);*/
          return new DataResponse("ID 1");
      }
 
@@ -56,7 +55,7 @@
       * @param string $title
       * @param string $content
       */
-     public function update(int $id, string $title, string $content) {
+    /* public function update(int $id, string $title, string $content) {
          try {
              $file = $this->mapper->find($id, $this->userId);
          } catch(Exception $e) {
@@ -72,7 +71,7 @@
       *
       * @param int $id
       */
-     public function destroy(int $id) {
+   /*  public function destroy(int $id) {
          try {
              $file = $this->mapper->find($id, $this->userId);
          } catch(Exception $e) {
@@ -81,5 +80,5 @@
          $this->mapper->delete($file);
          return new DataResponse($file);
      }
-
+*/
  }
