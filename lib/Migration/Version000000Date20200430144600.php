@@ -1,6 +1,6 @@
 <?php
 
-  namespace OCA\grafanadelamor\Migration;
+ /* namespace OCA\grafanadelamor\Migration;
 
   use Closure;
   use OCP\DB\ISchemaWrapper;
@@ -15,9 +15,9 @@
     * @param array $options
     * @return null|ISchemaWrapper
     */
-    public function changeSchema(IOutput $output, Closure $schemaClosure, array $options) {
+  /*  public function changeSchema(IOutput $output, Closure $schemaClosure, array $options) {
         /** @var ISchemaWrapper $schema */
-        $schema = $schemaClosure();
+   /*     $schema = $schemaClosure();
 
         if (!$schema->hasTable('grafanadelamor')) {
             $table = $schema->createTable('grafanadelamor');
