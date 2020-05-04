@@ -6,15 +6,20 @@
 
  class FileController extends Controller {
 
-     public function __construct(string $AppName, IRequest $request){
+    private $mapper;
+     private $userId;
+
+     public function __construct(string $AppName, IRequest $request, NoteMapper $mapper, $UserId){
          parent::__construct($AppName, $request);
+         $this->mapper = $mapper;
+         $this->userId = $UserId;
      }
 
      /**
       * @NoAdminRequired
       */
      public function index() {
-         // empty for now
+       return new DataResponse($this->mapper->findAll($this->userId));     
      }
 
      /**
@@ -23,7 +28,11 @@
       * @param int $id
       */
      public function show(int $id) {
-         // empty for now
+        try {
+             return new DataResponse($this->mapper->find($id, $this->userId));
+         } catch(Exception $e) {
+             return new DataResponse([], Http::STATUS_NOT_FOUND);
+         }
      }
 
      /**
@@ -33,7 +42,11 @@
       * @param string $content
       */
      public function create(string $title, string $content) {
-         // empty for now
+         $note = new Note();
+         $note->setTitle($title);
+         $note->setContent($content);
+         $note->setUserId($this->userId);
+         return new DataResponse($this->mapper->insert($file));
      }
 
      /**
@@ -44,7 +57,14 @@
       * @param string $content
       */
      public function update(int $id, string $title, string $content) {
-         // empty for now
+         try {
+             $note = $this->mapper->find($id, $this->userId);
+         } catch(Exception $e) {
+             return new DataResponse([], Http::STATUS_NOT_FOUND);
+         }
+         $note->setTitle($title);
+         $note->setContent($content);
+         return new DataResponse($this->mapper->update($file));
      }
 
      /**
@@ -53,7 +73,13 @@
       * @param int $id
       */
      public function destroy(int $id) {
-         // empty for now
+         try {
+             $note = $this->mapper->find($id, $this->userId);
+         } catch(Exception $e) {
+             return new DataResponse([], Http::STATUS_NOT_FOUND);
+         }
+         $this->mapper->delete($file);
+         return new DataResponse($file);
      }
 
  }
