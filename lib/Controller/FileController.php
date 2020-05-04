@@ -3,6 +3,8 @@
 
  use OCP\IRequest;
  use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http;
+ use OCP\AppFramework\Http\DataResponse;
 
  class FileController extends Controller {
 
