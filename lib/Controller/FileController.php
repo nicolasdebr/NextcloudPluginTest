@@ -1,5 +1,5 @@
 <?php
- namespace OCA\grafanadelamor\Controller;
+ namespace OCA\GrafanaDelAmor\Controller;
 
  use OCP\IRequest;
  use OCP\AppFramework\Controller;
