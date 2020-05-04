@@ -1,6 +1,16 @@
-var element = document.getElementById("button1");
-var search = document.getElementById("search-term");
-element.addEventListener("click", function()
-{
- alert(search.value);
+var baseUrl = OC.generateUrl('/apps/notestutorial');
+var note = {
+    title: 'New note',
+    content: 'This is the note text'
+};
+var id = 1;
+$.ajax({
+    url: baseUrl + '/notes/' + id,
+    type: 'PUT',
+    contentType: 'application/json',
+    data: JSON.stringify(note)
+}).done(function (response) {
+    // handle success
+}).fail(function (response, code) {
+    // handle failure
 });
