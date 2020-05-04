@@ -5,7 +5,7 @@
  use OCP\AppFramework\Controller;
  use OCP\AppFramework\Http;
  use OCP\AppFramework\Http\DataResponse;
- //use OCA\GrafanaDelAmor\Service\FileService;
+ use OCA\GrafanaDelAmor\Service\FileService;
 
  class FileController extends Controller {
 
@@ -16,7 +16,7 @@
      public function __construct(string $AppName, IRequest $request , $userId, FileService $service){
          parent::__construct($AppName, $request);
          $this->userId = $userId;
-         $this->service = $service;
+        // $this->service = $service;
      }
 
     
