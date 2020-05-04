@@ -3,7 +3,13 @@ namespace OCA\grafanadelamor\Service;
 
 use OCA\GrafanaDelAmor\Db\File;
 
+use OCA\GrafanaDelAmor\Db\FileMapper;
+
 class FileService {
+  public $mapper;
+  public function _construct(FileMapper $mapper){
+  $this->mapper = $mapper;
+  }
   
   public function create (string $tittle, string $content, string $userId){
     //return "Service : " . $tittle . $content . $userId;
@@ -12,7 +18,7 @@ class FileService {
   $file->setContent($content);
   $file->setUserId($userId);  
   
-    return $file;
+    return $this->mapper->insert($note);
   
   }
 }
