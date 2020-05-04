@@ -11,9 +11,9 @@ use OCP\AppFramework\Http;
     private $mapper;
      private $userId;
 
-     public function __construct(string $AppName, IRequest $request){
+     public function __construct(string $AppName, IRequest $request , $userId){
          parent::__construct($AppName, $request);
-         
+         $this->userId = $userId;
      }
 
      /**
@@ -47,7 +47,7 @@ use OCP\AppFramework\Http;
          $file->setTitle($title);
          $file->setContent($content);
          $file->setUserId($this->userId);*/
-         return new DataResponse("ID 1:" . $tittle . " " . $content);
+         return new DataResponse("file:" . $tittle . " " . $content ." " . $this->userId);
      }
 
      /**
