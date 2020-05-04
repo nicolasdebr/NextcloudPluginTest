@@ -12,5 +12,5 @@ $.ajax({
 }).done(function (response) {
     alert(response);
 }).fail(function (response, code) {
-    alert(codde + response);
+    alert(code + response);
 });
