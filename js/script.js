@@ -10,7 +10,7 @@ $.ajax({
     contentType: 'application/json',
     data: JSON.stringify(file)
 }).done(function (response) {
-    alert(response);
+    alert(JSON.stringify(response));
 }).fail(function (response, code) {
     alert(code + response);
 });
