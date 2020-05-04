@@ -1,5 +1,5 @@
 <?php
-/*namespace OCA\grafanadelamor\Db;
+namespace OCA\grafanadelamor\Db;
 
 use JsonSerializable;
 
