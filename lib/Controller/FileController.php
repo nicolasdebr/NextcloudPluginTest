@@ -18,9 +18,22 @@
          $this->userId = $userId;
          $this->service = $service;
      }
+     /**
+     *
+     *@param int $id
+     */
+     public function show(int $id){
+       return $this->service->find($id, $this->userId);
+     }
+     /**
+      * @NoAdminRequired
+      */
 
-    
-    
+     public function showAll(){
+       return new DataResponse($this->service->findAll($this->userId));
+     }
+
+
      /**
       * @NoAdminRequired
       *
@@ -36,5 +49,5 @@
       return new DataResponse($serviceResponse);
      }
 
-     
+
  }

@@ -10,10 +10,11 @@
 return [
     'routes' => [
 	['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
-        ['name' => 'file#index', 'url' => '/files', 'verb' => 'GET'],
+        
         ['name' => 'file#show', 'url' => '/files/{id}', 'verb' => 'GET'],
         ['name' => 'file#create', 'url' => '/files', 'verb' => 'POST'],
         ['name' => 'file#update', 'url' => '/files/{id}', 'verb' => 'PUT'],
-        ['name' => 'file#destroy', 'url' => '/files/{id}', 'verb' => 'DELETE']
+        ['name' => 'file#destroy', 'url' => '/files/{id}', 'verb' => 'DELETE'],
+        ['name' => 'file#showAll', 'url' => '/files', 'verb' => 'GET']
     ]
 ];

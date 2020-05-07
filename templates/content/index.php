@@ -1,4 +1,4 @@
-   
+
 <div id="search">
     <form id="search-form">
         <input type="text" placeholder="" id="search-term" />
@@ -6,3 +6,8 @@
     </form>
 </div>
 
+<?php
+$result = json_decode(response);
+var_dump($result);
+
+ ?>

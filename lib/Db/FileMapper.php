@@ -1,5 +1,5 @@
 <?php
-namespace OCA\grafanadelamor\Db;
+namespace OCA\GrafanaDelAmor\Db;
 
 use OCP\IDbConnection;
 use OCP\AppFramework\Db\QBMapper;
@@ -10,7 +10,7 @@ class FileMapper extends QBMapper {
         parent::__construct($db, 'grafanadelamor', File::class);
     }
 
-  /*  public function find(int $id, string $userId) {
+    public function find(int $id, string $userId) {
         $qb = $this->db->getQueryBuilder();
 
                     $qb->select('*')
@@ -24,7 +24,7 @@ class FileMapper extends QBMapper {
         return $this->findEntity($qb);
     }
 
-    public function findAll(string $userId) {
+   public function findAll(string $userId) {
         $qb = $this->db->getQueryBuilder();
 
         $qb->select('*')
@@ -35,5 +35,5 @@ class FileMapper extends QBMapper {
 
         return $this->findEntities($qb);
     }
-*/
+
 }

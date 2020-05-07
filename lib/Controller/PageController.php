@@ -25,25 +25,23 @@ class PageController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function index() {
-		
-		$fichier = "";
-		
-$total = 0;
-$ressource = fopen ($fichier, "r");
-$contenu = fread ($ressource, filesize ($fichier));
-fclose ($ressource);
-$tableau = explode("\r\n", $contenu);
-$longueurs = array();
-foreach($tableau as $ligne)
-{
-    $total = strlen($ligne)+$total;
-}
-$nb = count($tableau);
-		$tableau =array('total'=> 5);
 
-		return new TemplateResponse('grafanadelamor', 'index',$tableau);  // templates/index.php
+// 		$fichier = "";
+//
+// $total = 0;
+// $ressource = fopen ($fichier, "r");
+// $contenu = fread ($ressource, filesize ($fichier));
+// fclose ($ressource);
+// $tableau = explode("\r\n", $contenu);
+// $longueurs = array();
+// foreach($tableau as $ligne)
+// {
+//     $total = strlen($ligne)+$total;
+// }
+// $nb = count($tableau);
+// 		$tableau =array('total'=> 5);
+
+		return new TemplateResponse('grafanadelamor', 'index');  // templates/index.php
 	}
-	public function GetFile($file){
-		
-	}
+	
 }
